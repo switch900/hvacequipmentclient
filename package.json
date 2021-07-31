@@ -1,0 +1,55 @@
+{
+  "name": "hvacequipmentclient8",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "formik": "^2.2.9",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-qr-reader": "^2.2.1",
+    "react-qr-scanner": "^1.0.0-alpha.7",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "react-select": "^4.3.1",
+    "react-select-search": "^3.0.7",
+    "react-social-icons": "^5.5.1",
+    "react-table": "^7.7.0",
+    "reactstrap": "^8.9.0",
+    "rxjs": "^7.2.0",
+    "web-vitals": "^1.0.1",
+    "yup": "^0.32.9"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "bootstrap": "^4.1.1",
+    "gh-pages": "^3.2.3",
+    "jquery": "^3.6.0",
+    "popper.js": "^1.16.1"
+  }
+}

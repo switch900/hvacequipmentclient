@@ -1,0 +1,25 @@
+
+input.btn.btn-primary {
+    float: right;
+    margin-right: 10%;
+}
+
+.loginFormContainer {
+    margin-top: 120px;
+}
+
+.loginContainer {
+    margin-top: 50px;
+}
+
+@media (min-width: 576px)
+{
+.jumbotron {
+    padding: 4rem 2rem;
+    margin-bottom: 0px;
+}
+}
+
+.List{
+    padding:10px;
+}

@@ -1,0 +1,11 @@
+button.btn.btn-success {
+    margin-bottom: 10px;
+}
+
+table.table.table-striped tr:hover {background-color:#7B8E9E !important;}
+
+table.table.table-striped {
+    margin-bottom: 100px;
+}
+
+

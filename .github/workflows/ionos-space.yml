@@ -10,9 +10,9 @@ jobs:
         uses: ionos-deploy-now/retrieve-project-info-action@v1
         id: project
         with:
-          api-key: ${{ secrets.IONOS_API_KEY }}
-          project: 70414029-8c8f-49ca-9fa1-d0e30f6f1847
           service-host: api-us.ionos.space
+          api-key: ${{ secrets.IONOS_API_KEY }}
+          project: 83b3c82d-7829-48aa-899f-c6eef8046378
       - name: checkout
         if: ${{ steps.project.outputs.deployment-enabled == 'true' }}
         uses: actions/checkout@v2
@@ -25,7 +25,7 @@ jobs:
           node-version: 12.16.x
       - name: Prepare Project build environment
         if: ${{ steps.project.outputs.deployment-enabled == 'true' }}
-        run: npm ci
+        run: npm install
       - name: Build Node project
         if: ${{ steps.project.outputs.deployment-enabled == 'true' }}
         run: npm run build
@@ -36,10 +36,10 @@ jobs:
         if: ${{ steps.project.outputs.deployment-enabled == 'true' }}
         uses: ionos-deploy-now/deploy-to-ionos-action@v1
         with:
+          service-host: api-us.ionos.space
           api-key: ${{ secrets.IONOS_API_KEY }}
           remote-host: ${{ steps.project.outputs.remote-host }}
           dist-folder: build
-          project: 70414029-8c8f-49ca-9fa1-d0e30f6f1847
+          project: 83b3c82d-7829-48aa-899f-c6eef8046378
           storage-quota: ${{ steps.project.outputs.storage-quota }}
           branch-id: ${{ steps.project.outputs.branch-id }}
-          service-host: api-us.ionos.space

@@ -1,4 +1,3 @@
-import React, { Component } from 'react';
 import logo from './images/logo.png';
 import {
     UncontrolledDropdown,

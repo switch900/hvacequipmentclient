@@ -50,6 +50,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+
     authenticationService.currentUser.subscribe(x => this.setState({ currentUser: x }));
 
   }
@@ -59,6 +60,7 @@ class App extends React.Component {
     history.push('/login');
   }
   render() {
+
     const { currentUser } = this.state;
     return (
       <Router history={history}>

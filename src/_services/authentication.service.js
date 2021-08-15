@@ -19,15 +19,40 @@ function login(username, password) {
     };
 
     return fetch('https://andrewhewitson.com/auth/login', requestOptions)
-        .then(handleResponse)
-        .then(user => {
-            alert("Welcome to the Naughty or Nice list ");
-            // store user details and jwt token in local storage to keep user logged in between page refreshes
-            localStorage.setItem('currentUser', JSON.stringify(user));
-            currentUserSubject.next(user);
-            return user;
-        })
+        // .then(res => res.json()).then(res => {
+        //     localStorage.setItem('currentUser', JSON.stringify(res));
+        // })
+        // .then(res => {
+        //     alert(res);
+        //     // store user details and jwt token in local storage to keep user logged in between page refreshes
+        //     localStorage.setItem('currentUser', JSON.stringify(res));
+        //     currentUserSubject.next(res);
+        //     return res;
+        // })
+        // .then(handleResponse)
+        // .then(alert("Welcome to the Naughty or Nice list "))
+        .then(res => res.json()).then(res => {
+            localStorage.setItem('currentUser', JSON.stringify(res));
 
+            if (res.token) {
+                alert("Welcome to the HVAC Project");
+                window.location.href = '/';
+                // if (localStorage.getItem('credentials') === "Admin") {
+                //     window.location.href = '/list';
+                // }
+                // else if (localStorage.getItem('credentials') === "Child") {
+                //     window.location.href = '/detail/' + localStorage.getItem('id');
+                // }
+                // else {
+                //     alert("Nothing Found");
+                // }
+            }
+            else {
+                alert("Not a valid user or password");
+            }
+        }, function (error) {
+            console.log(error.message); //=> String
+        })
 }
 
 function logout() {

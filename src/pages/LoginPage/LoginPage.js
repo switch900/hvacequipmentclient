@@ -36,10 +36,11 @@ class LoginPage extends React.Component {
                                         const { from } = this.props.location.state || { from: { pathname: "/" } };
                                         this.props.history.push(from);
                                     },
-                                    error => {
-                                        setSubmitting(false);
-                                        setStatus(error);
-                                    }
+                                    // error => {
+                                    //     alert(error);
+                                    //     setSubmitting(false);
+                                    //     setStatus(error);
+                                    // }
                                 );
                         }}
                         render={({ errors, status, touched, isSubmitting }) => (

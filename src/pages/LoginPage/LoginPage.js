@@ -47,12 +47,12 @@ class LoginPage extends React.Component {
                             <Form>
                                 <div className="form-group">
                                     <label htmlFor="username">Username</label>
-                                    <Field name="username" type="text" className={'form-control' + (errors.username && touched.username ? ' is-invalid' : '')} />
+                                    <Field name="username" type="text" className={'form-control' + (errors.username && touched.username ? ' is-invalid' : '')} autoComplete="username" />
                                     <ErrorMessage name="username" component="div" className="invalid-feedback" />
                                 </div>
                                 <div className="form-group">
                                     <label htmlFor="password">Password</label>
-                                    <Field name="password" type="password" className={'form-control' + (errors.password && touched.password ? ' is-invalid' : '')} />
+                                    <Field name="password" type="password" className={'form-control' + (errors.password && touched.password ? ' is-invalid' : '')} autoComplete="current-password" />
                                     <ErrorMessage name="password" component="div" className="invalid-feedback" />
                                 </div>
                                 <div className="form-group">

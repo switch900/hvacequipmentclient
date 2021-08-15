@@ -33,6 +33,7 @@ function login(username, password) {
         // .then(alert("Welcome to the Naughty or Nice list "))
         .then(res => res.json()).then(res => {
             localStorage.setItem('currentUser', JSON.stringify(res));
+            currentUserSubject.next(res);
 
             if (res.token) {
                 alert("Welcome to the HVAC Project");
@@ -53,6 +54,7 @@ function login(username, password) {
         }, function (error) {
             console.log(error.message); //=> String
         })
+        .then(handleResponse)
 }
 
 function logout() {

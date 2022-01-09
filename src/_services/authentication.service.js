@@ -18,6 +18,7 @@ function login(username, password) {
             'Content-Type': 'application/json'
             , 'mode': 'no-cors'
             , 'Access-Control-Allow-Origin': '*'
+            , 'Access-Control-Allow-Methods': 'PUT, POST, DELETE's
         },
 
         body: JSON.stringify({ username, password })

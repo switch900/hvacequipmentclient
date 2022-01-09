@@ -14,8 +14,12 @@ export const authenticationService = {
 function login(username, password) {
     const requestOptions = {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        mode: 'no-cors',
+        headers: {
+            'Content-Type': 'application/json'
+            , 'mode': 'no-cors'
+            , 'Access-Control-Allow-Origin': '*'
+        },
+
         body: JSON.stringify({ username, password })
     };
 
